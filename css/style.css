@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500,600,700,900&display=swap');
+
+:root {
+  --primary-color: #f60f20;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+}
+
+/* base styles */
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+p {
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* button */
+.btn {
+  /* now here we added display inline-block cause this btn is inside a link tag & link tags are by default inline, that's y we have to add inline-block */
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  cursor: pointer;
+  border: 0;
+}
+.btn:hover {
+  transform: scale(0.98);
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  padding: 100px;
+}
+
+/* navigation section */
+.logo {
+  /* this means take out the regular positioning and we can adjustthem by ourself */
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 10;
+}
+/* toggle */
+
+.toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color) url(../images/menu.png);
+  z-index: 20;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.navigation {
+  display: none;
+}
+
+/* home page */
+.home-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
+.home-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* to make the height adjustable to the screen size we are using height with % */
+  height: 110%;
+}
